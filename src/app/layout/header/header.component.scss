@@ -1,0 +1,35 @@
+.bg-custom-1 {
+    background-color: #85144b;
+}
+
+.bg-custom-2 {
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}
+
+.a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.a:hover {
+    background-color: #acb2d3;
+}
+
+.active-route {
+    background-color: #929cd1;
+}
+
+@media screen and (max-width: 571px) {
+    // .a {
+    //     margin: 20px;
+    //     text-decoration: none;
+    //     color: white;
+    //     cursor: pointer;
+    //     padding: 10px;
+    // }
+    .b {
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,59 @@
+<div class="modal fade" style="overflow: auto;" [ngClass]="{'show': isShowModal}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" id="mainModalDiv">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Create Product</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="showModelClick()">
+          <span aria-hidden="true" style="color: rgb(255, 255, 255); font-size: 40px;">&times;</span>
+        </button>
+            </div>
+            <div class="container">
+                <form>
+
+                    <div class="form-group">
+                        <label for="">Product Name:</label>
+                        <input type="text" class="form-control" name="" id="" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="supplier">Supplier</label>
+                        <select class="form-control" name="" id="supplier">
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Catefory</label>
+                        <select class="form-control" name="" id="category">
+                          <option>A</option>
+                          <option>B</option>
+                          <option>C</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="text" class="form-control" name="" id="price" placeholder="">
+                    </div>
+                    <!-- <div class="form-group"> -->
+                    <label for="price">Discounted :</label>&nbsp;
+                    <input type="radio" name="discount" id="" value="yes"> yes &nbsp;
+                    <input type="radio" name="discount" id="" value="no" checked> no
+                    <!-- </div> -->
+
+                    <div class="form-group">
+                        <label for="price">Total Discount</label>
+                        <input type="text" class="form-control" name="" id="price" placeholder="">
+                    </div>
+
+
+                    <div class="modal-footer d-flex justify-content-end">
+
+                        <button type="submit" class="btn btn-danger" (click)="showModelClick()">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

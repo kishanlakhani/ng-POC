@@ -1,0 +1,84 @@
+<div class="row">
+    <div class="col-sm-6 col-md-3 mb-2">
+        <h1>Product</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6 col-md-3 mb-2">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="search by name/id">
+        </div>
+    </div>
+    <div class="col-sm-4 col-md-2 mb-2">
+        <div class="form-group">
+            <select class="form-control" name="" id="">
+             <option disabled>supplier</option>
+             <option>A</option>
+             <option>B</option>
+             <option>C</option>
+           </select>
+        </div>
+    </div>
+    <div class="col-sm-4 col-md-2 mb-2">
+        <div class="form-group">
+            <select class="form-control" name="" id="">
+             <option>category</option>
+             <option>A</option>
+             <option>B</option>
+             <option>C</option>
+           </select>
+        </div>
+    </div>
+    <div class=" col-sm-4 col-md-2 mb-2">
+        <button class="btn btn-primary btn-block" (click)="addCall()">Create Product</button>
+        <app-product-add-edit *ngIf="isAdd" (onCloseEvent)="onCloseEventCall($event)"></app-product-add-edit>
+
+    </div>
+    <div class="col-sm-6 col-md-3 mb-2">
+        <button class="btn btn-primary btn-block">Export to Excel</button>
+    </div>
+</div>
+
+
+<div class="row ">
+    <div class="col-mg-4 h3 p-2 text-light bg-dark">
+        Product Table
+    </div>
+</div>
+
+
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Supplier</th>
+            <th scope="col">Category</th>
+            <th scope="col">Price</th>
+            <th scope="col">Discounted</th>
+            <th scope="col">Total Discounted</th>
+            <th scope="col">Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of productList$;let i=index">
+            <th scope="row">{{ i }}</th>
+            <!-- <td>{{ }}</td> -->
+            <td>{{ product.name }}</td>
+            <td>{{ product.supplier }}</td>
+            <td>{{ product.category }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.discounted }}</td>
+            <td>
+                <input type="text" class="form-control" [value]="product.discount" *ngIf="product.discount" name="" id="" placeholder="">
+                <p *ngIf="!product.discount">No Discount</p>
+            </td>
+            <td scope="col"><button type="button" (click)="editCall()" class="btn btn-primary">>></button></td>
+            <app-product-add-edit *ngIf="isEdit"></app-product-add-edit>
+        </tr>
+
+    </tbody>
+</table>
+
+<!-- 
+<pagination [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize" (click)="pageChange(bigCurrentPage)"></pagination> -->

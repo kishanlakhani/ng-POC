@@ -1,0 +1,19 @@
+    .modal.show {
+        display: block;
+    }
+    
+    .display-none {
+        display: none;
+    }
+    
+    #mainModalDiv {
+        background-image: url("https://cdn.pixabay.com/photo/2015/08/18/10/42/form-893708_960_720.jpg");
+        color: white;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        font-size: 20px;
+    }
+    
+    input {
+        font-size: large;
+    }
